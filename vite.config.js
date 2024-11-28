@@ -6,5 +6,8 @@ export default defineConfig({
   css: {
     postcss: './postcss.config.mjs', // Ensure PostCSS works with ES Module
   },
+  optimizeDeps: {
+    include: ["@splinetool/react-spline"],
+  },
   plugins: [react()],
 })

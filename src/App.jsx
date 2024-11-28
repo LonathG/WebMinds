@@ -26,36 +26,92 @@ function App() {
 
   return (
     <>
-      <Cursor stickyElement={stickyElement} />
       <Commons ref={stickyElement} />
+      <Cursor stickyElement={stickyElement} />
       <Landing />
       <HeroParallax products={products} />
       <Spline scene="https://prod.spline.design/yiyXGJDlZ91KMVbs/scene.splinecode" />
       <FeaturesSection/>
       <FAQ/>
       <RevealLinks/>
-      <Footer/>
-      <Trippyscroll/>
+      <Trippyscroll/> 
       <Landing2/>
+      <Footer/>
     </>
   );
 }
 
 export const products = [
-  { title: "Moonbeam", link: "https://gomoonbeam.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/moonbeam.png" },
-  { title: "Cursor", link: "https://cursor.so", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cursor.png" },
-  { title: "Rogue", link: "https://userogue.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/rogue.png" },
-  { title: "Editorially", link: "https://editorially.org", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editorially.png" },
-  { title: "Editrix AI", link: "https://editrix.ai", thumbnail: "https://aceternity.com/images/products/thumbnails/new/editrix.png" },
-  { title: "Pixel Perfect", link: "https://app.pixelperfect.quest", thumbnail: "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png" },
-  { title: "Algochurn", link: "https://algochurn.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/algochurn.png" },
-  { title: "Aceternity UI", link: "https://ui.aceternity.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/aceternityui.png" },
-  { title: "Tailwind Master Kit", link: "https://tailwindmasterkit.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png" },
-  { title: "SmartBridge", link: "https://smartbridgetech.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/smartbridge.png" },
-  { title: "Renderwork Studio", link: "https://renderwork.studio", thumbnail: "https://aceternity.com/images/products/thumbnails/new/renderwork.png" },
-  { title: "Creme Digital", link: "https://cremedigital.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/cremedigital.png" },
-  { title: "Golden Bells Academy", link: "https://goldenbellsacademy.com", thumbnail: "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png" },
-  { title: "Invoker Labs", link: "https://invoker.lol", thumbnail: "https://aceternity.com/images/products/thumbnails/new/invoker.png" },
+  {
+    title: "WebD",
+    link: "https://gomoonbeam.com",
+    thumbnail: "/assets/thumbnails/bijou.webp"
+  },
+  {
+    title: "Lolins",
+    link: "https://cursor.so",
+    thumbnail: "/assets/thumbnails/lolins.webp"
+  },
+  {
+    title: "Rogue",
+    link: "https://userogue.com",
+    thumbnail: "/assets/thumbnails/WebD.jpg"
+  },
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail: "/assets/thumbnails/artisan.webp"
+  },
+  {
+    title: "Editrix AI",
+    link: "https://editrix.ai",
+    thumbnail: "/assets/thumbnails/artisan.webp"
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail: "/assets/thumbnails/artisan.webp"
+  },
+  {
+    title: "Algochurn",
+    link: "https://algochurn.com",
+    thumbnail: "/assets/thumbnails/timber.webp"
+  },
+  {
+    title: "timber",
+    link: "https://ui.aceternity.com",
+    thumbnail: "/assets/thumbnails/furnish.webp"
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    thumbnail: "/assets/thumbnails/Color.webp"
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    thumbnail: "/assets/thumbnails/artisan.webp"
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    thumbnail: "/assets/thumbnails/artisan.webp"
+  },
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    thumbnail: "/assets/thumbnails/LEF.webp"
+  },
+  {
+    title: "Golden Bells Academy",
+    link: "https://goldenbellsacademy.com",
+    thumbnail: "/assets/thumbnails/crane.webp"
+  },
+  {
+    title: "Invoker Labs",
+    link: "https://invoker.lol",
+    thumbnail: "/assets/thumbnails/jimmu.webp"
+  },
 ];
 
 export default App;
