@@ -1,0 +1,101 @@
+
+.left {
+    left: 0;
+    height: 93vh;
+    width:6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 2%;
+    position: fixed;
+    z-index: 10009;
+}
+
+.right {
+    display: flex;
+    height: 93vh;
+    flex-direction: column;
+    justify-content: space-between;
+    right: 0;
+    margin: 2%;
+    text-align: right;
+    position: fixed;
+    z-index: 10009;
+}
+
+.right ul {
+    list-style-type: none;
+    font-family: 'k2d', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    transition: 0.5s;
+}
+
+.right .top ul li a:hover {
+    font-weight: 900;
+    transition: 0.5s;
+    cursor: none;
+}
+
+.left img {
+    width: 100%;
+    margin: 20% 10%;
+}
+
+.top{
+    top:0;
+    transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.left .top:hover{
+    filter: invert(1);
+    transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.bottom{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    bottom:10%;
+}
+
+.left .bottom {
+    
+    margin-right: 30%;
+    align-items: center;
+    mix-blend-mode: difference;
+}
+
+.right .bottom {
+    align-items: center;
+}
+
+.icons {
+    font-size:200%; /* Increase size as needed */
+    margin-bottom: 15px;
+}
+
+.one {
+    padding: 5px;
+    transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.one:hover{
+    color: antiquewhite;
+    transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+
+}
+
+@media (prefers-color-scheme: dark) {
+    .one:hover{
+        filter: invert(1);
+        transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+    }
+
+
+.top:hover {
+    filter: invert(0);
+    transition: filter 0.3s ease; /* Smooth transition for the hover effect */
+}
+}

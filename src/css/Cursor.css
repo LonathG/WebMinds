@@ -1,0 +1,39 @@
+/* cursor.css */
+
+.cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff; 
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+    z-index: 10002;
+  }
+
+  .cursor.hidden {
+    opacity: 0; /* Hide the cursor */
+  }
+  
+  a:hover .cursor,
+  button:hover .cursor {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  
+  @media (prefers-color-scheme: light) {
+    .cursor {
+      background-color: #0065AD; 
+    }
+  }
+  
+  /* Additional blending mode options: 
+  - normal: No blending
+  - multiply: Multiplies the color values
+  - screen: Inverse of multiply
+  - overlay: Combination of multiply and screen
+  - difference: Subtracts color values
+  - lighten: Lightens based on the background
+  - darken: Darkens based on the background
+  */
+  

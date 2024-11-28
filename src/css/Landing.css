@@ -1,0 +1,30 @@
+.main{
+    height: 100vh;
+    cursor: none;
+    /* font-weight: 100; */
+}
+
+.hero, .mask{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    line-height: 1;
+    text-align: right;
+    font-family: 'K2D';
+}
+
+.mask{
+    position: absolute;
+    mask-image: url(./mask.svg);
+    mask-repeat: no-repeat;
+    background-color: rgb(0, 0, 0);
+    /* mask-size: 2px; */
+    color: #ec0059;
+    z-index: 10002;
+}
+
+
+

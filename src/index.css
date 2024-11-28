@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: none;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: none;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #0065AD;
+    background-color: #ffffff;
+  }
+
+  h1{
+    color: #0065AD;
+  }
+
+  .mask h1{
+    color: #ec0059;
+  }
+
+  .mask {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .cursor{
+    background-color: #0065AD; /* You can use any color */
+  }
+}
