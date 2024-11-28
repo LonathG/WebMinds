@@ -37,7 +37,7 @@ const FAQPage = () => {
   ];
 
   return (
-    <div className="min-h-screen dark:bg-gray-900 py-12 px-6 md:px-12 lg:px-20">
+    <div className=" dark:bg-gray-900 py-12 px-6 md:px-12 lg:px-20">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-3xl md:text-5xl font-bold mb-6 font-k2d">
           Frequently Asked Questions

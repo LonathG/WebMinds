@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const RevealLinks = () => {
   return (
-<section className="grid place-content-center gap-2 px-8 py-24 text-[#006AD] dark:bg-gray-800">
+<section className="grid place-content-center gap-2 px-8 py-24 my-24 text-[#006AD] dark:bg-gray-800">
       <FlipLink href="#">Tiktok</FlipLink>
       <FlipLink href="#">Youtube</FlipLink>
       <FlipLink href="#">Facebook</FlipLink>
@@ -23,7 +23,7 @@ const FlipLink = ({ children, href }) => {
       href={href}
       className="relative block overflow-hidden whitespace-nowrap text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl"
       style={{
-        lineHeight: 0.75,
+        lineHeight: 0.8,
       }}
     >
       <div>

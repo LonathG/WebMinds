@@ -2,9 +2,11 @@ import './App.css';
 import Commons from "./components/commons";
 import Cursor from "./components/Cursor";
 import Landing from "./components/Landing";
+import Landing2 from "./components/Landing2";
 import Spline from '@splinetool/react-spline';
 import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
+import Trippyscroll from "./components/Trippyscroll"
 
 import { useRef, useEffect } from 'react';
 import  { HeroParallax } from "../src/components/ui/hero-parallax";
@@ -33,6 +35,8 @@ function App() {
       <FAQ/>
       <RevealLinks/>
       <Footer/>
+      <Trippyscroll/>
+      <Landing2/>
     </>
   );
 }
