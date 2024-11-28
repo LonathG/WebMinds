@@ -2,6 +2,10 @@ import React, { useState, forwardRef, useRef } from "react";
 import LogoLight from "../assets/Webminds.webp";
 import LogoDark from "../assets/Webminds-dark.webp";
 import "../css/commons.css";
+import '../css/style.css'
+
+import Nav from "../components/Nav"
+
 
 import { motion } from "framer-motion";
 
@@ -12,6 +16,9 @@ import { RiInstagramFill } from "react-icons/ri";
 
 // Forward ref for multiple elements
 const Commons = forwardRef((props, ref) => {
+
+
+  const [isActive,setIsActive] = useState(false);
 
   const [logo, setLogo] = useState(LogoLight);
   const [isCursorVisible, setCursorVisible] = useState(true); // State to manage cursor visibility
@@ -51,6 +58,13 @@ const Commons = forwardRef((props, ref) => {
 
   return (
     <>
+
+      <div  className="button22" onClick={() => setIsActive(!isActive)}>
+        <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
+      </div>
+      
+        {isActive && <Nav />}
+
       <div className="left">
         <motion.div ref={logoRef}>
           <img className="top" src={logo} alt="WebMinds-Logo" />
@@ -81,15 +95,9 @@ const Commons = forwardRef((props, ref) => {
       {/* Right Section */}
       <div className="right">
         <div
-          className="top"
-          onMouseEnter={() => setCursorVisible(false)} // Hide cursor when hovering over .right .top
-          onMouseLeave={() => setCursorVisible(true)} // Show cursor when leaving .right .top
+          className="top" 
         >
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#work">Work</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+
         </div>
         <div className="bottom">
           <div className="one" ref={facebookRef}>

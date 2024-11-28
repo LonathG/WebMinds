@@ -1,4 +1,5 @@
 import './App.css';
+
 import Commons from "./components/commons";
 import Cursor from "./components/Cursor";
 import Landing from "./components/Landing";
@@ -7,6 +8,10 @@ import Spline from '@splinetool/react-spline';
 import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
 import Trippyscroll from "./components/Trippyscroll"
+
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
+
 
 import { useRef, useEffect } from 'react';
 import  { HeroParallax } from "../src/components/ui/hero-parallax";
@@ -26,6 +31,7 @@ function App() {
 
   return (
     <>
+    <Router>
       <Commons ref={stickyElement} />
       <Cursor stickyElement={stickyElement} />
       <Landing />
@@ -37,6 +43,7 @@ function App() {
       <Trippyscroll/> 
       <Landing2/>
       <Footer/>
+      </Router>
     </>
   );
 }
@@ -45,7 +52,7 @@ export const products = [
   {
     title: "WebD",
     link: "https://gomoonbeam.com",
-    thumbnail: "/assets/thumbnails/bijou.webp"
+    thumbnail: "/assets/thumbnails/crane.webp"
   },
   {
     title: "Lolins",
@@ -105,7 +112,7 @@ export const products = [
   {
     title: "Golden Bells Academy",
     link: "https://goldenbellsacademy.com",
-    thumbnail: "/assets/thumbnails/crane.webp"
+    thumbnail: "/assets/thumbnails/bijou.webp"
   },
   {
     title: "Invoker Labs",

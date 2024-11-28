@@ -16,8 +16,8 @@ const Cursor = ({ stickyElement }) => {
   // Mouse move handler to track the mouse position
   const manageMouseMove = (e) => {
     const { clientX, clientY } = e;
-    mouse.x.set(clientX - cursorSize / 2);
-    mouse.y.set(clientY - cursorSize / 2);
+    mouse.x.set(clientX - cursorSize / 6);
+    mouse.y.set(clientY - cursorSize / 6);
   };
 
   // Smooth options for the cursor movement

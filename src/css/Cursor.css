@@ -9,7 +9,7 @@
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease;
-    z-index: 10002;
+    z-index: 10004;
   }
 
   .cursor.hidden {
@@ -26,14 +26,3 @@
       background-color: #0065AD; 
     }
   }
-  
-  /* Additional blending mode options: 
-  - normal: No blending
-  - multiply: Multiplies the color values
-  - screen: Inverse of multiply
-  - overlay: Combination of multiply and screen
-  - difference: Subtracts color values
-  - lighten: Lightens based on the background
-  - darken: Darkens based on the background
-  */
-  
