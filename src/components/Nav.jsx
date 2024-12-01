@@ -1,44 +1,39 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom'; // Import React Router Link
+import { Link } from 'react-scroll'; // Import react-scroll Link for smooth scrolling
 import '../css/Nav.css'; // Assuming global CSS file is being used
 import { menuSlide } from '../js/anim';
 
 const navItems = [
   {
     title: "Work",
-    href: "/Work",
+    href: "Work", // Matching section name for smooth scroll
   },
   {
     title: "Services",
-    href: "/Services",
+    href: "Services", // Matching section name for smooth scroll
   },
   {
     title: "FAQs",
-    href: "/FAQs",
+    href: "FAQ", // Matching section name for smooth scroll
+  },
+  {
+    title: "Socials",
+    href: "Socials", // Matching section name for smooth scroll
   },
   {
     title: "Contact",
-    href: "/Contact",
+    href: "Contact", // Matching section name for smooth scroll
   },
 ];
 
 export default function Index() {
-  const [selectedIndicator, setSelectedIndicator] = useState(window.location.pathname);
+  const [selectedIndicator, setSelectedIndicator] = useState('');
 
-  // Update active state when URL changes (simulate componentDidUpdate)
-  React.useEffect(() => {
-    const handleLocationChange = () => {
-      setSelectedIndicator(window.location.pathname);
-    };
-
-    window.addEventListener('popstate', handleLocationChange);
-
-    // Cleanup on component unmount
-    return () => {
-      window.removeEventListener('popstate', handleLocationChange);
-    };
-  }, []);
+  // Update active state on link hover
+  const handleHover = (href) => {
+    setSelectedIndicator(href);
+  };
 
   return (
     <motion.div
@@ -50,7 +45,7 @@ export default function Index() {
     >
       <div className="body">
         <div
-          onMouseLeave={() => { setSelectedIndicator(window.location.pathname); }}
+          onMouseLeave={() => setSelectedIndicator('')} // Reset active state on mouse leave
           className="nav"
         >
           <div className="header">
@@ -58,13 +53,16 @@ export default function Index() {
           </div>
           {navItems.map((data, index) => (
             <div key={index} className={`link-item ${selectedIndicator === data.href ? 'active' : ''}`}>
-              <RouterLink
+              <Link
                 to={data.href}
-                onMouseEnter={() => setSelectedIndicator(data.href)}
+                smooth={true}
+                duration={500}
+                onMouseEnter={() => handleHover(data.href)} // Highlight link on hover
+                onMouseLeave={() => setSelectedIndicator('')} // Reset hover effect when mouse leaves
                 className="nav-link"
               >
                 {data.title}
-              </RouterLink>
+              </Link>
             </div>
           ))}
         </div>

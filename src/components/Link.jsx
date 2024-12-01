@@ -20,7 +20,7 @@ export default function Index({ data, isActive, setSelectedIndicator }) {
         animate={isActive ? "open" : "closed"}
         className="indicator"
       ></motion.div>
-      <a href={href}>{title}</a> {/* Replace Link with a regular anchor tag */}
+      <a href={href}>{title}</a> 
     </motion.div>
   );
 }

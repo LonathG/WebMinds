@@ -4,6 +4,9 @@ import LogoDark from "../assets/Webminds-dark.webp";
 import "../css/commons.css";
 import '../css/style.css'
 
+import Curve from "./Curve"
+import {AnimatePresence} from 'framer-motion'
+
 import Nav from "../components/Nav"
 
 
@@ -63,7 +66,11 @@ const Commons = forwardRef((props, ref) => {
         <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
       </div>
       
+      <AnimatePresence mode="wait">
+
         {isActive && <Nav />}
+      </AnimatePresence>
+        <Curve/>
 
       <div className="left">
         <motion.div ref={logoRef}>

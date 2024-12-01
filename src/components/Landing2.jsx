@@ -43,7 +43,7 @@ export default function Landing() {
                         onMouseEnter={() => setIsHovered(true)} 
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        "We Love our <br />Website too"
+                        "Our Interns Made <br />this Website"
                     </h1>
                 </motion.div>
 

@@ -27,7 +27,7 @@ const generateSections = (count, color, rotate, theme) => {
   }
 
   const nextColor =
-    theme === "light" ? (color === "#f4f4f4" ? "#242424" : "#f4f4f4") : (color === "#242424" ? "#f4f4f4" : "#242424");
+    theme === "light" ? (color === "#f4f4f4" ? "#0065a0" : "#f4f4f4") : (color === "#0065a0" ? "#f4f4f4" : "#0065a0");
 
   return (
     <Section rotate={rotate} background={color}>

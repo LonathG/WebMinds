@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
 
   color-scheme: light dark;
@@ -22,7 +26,6 @@ a{
   color: inherit;
   cursor: none;
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -43,6 +46,6 @@ a{
   }
 
   .cursor{
-    background-color: #0065AD; /* You can use any color */
+    background-color: #0065AD; 
   }
 }

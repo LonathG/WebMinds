@@ -25,5 +25,11 @@
     z-index: 10002;
 }
 
-
-
+@media  (max-width:430px){
+    .hero h1{
+        font-size: 3rem;
+    }
+    .mask h1{
+        font-size: 3rem;
+    }
+}

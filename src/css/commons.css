@@ -36,11 +36,11 @@
     transition: 0.5s;
     cursor: none;
 } */
-
+/* 
 .left img {
-    width: 100%;
+    width: 200%;
     margin: 20% 10%;
-}
+} */
 
 .left .top:hover{
     filter: invert(1);
@@ -100,4 +100,27 @@
     filter: invert(0);
     transition: filter 0.3s ease; /* Smooth transition for the hover effect */
 }
+}
+
+@media screen and (max-width:430px) {
+    .left {
+        height: 97vh;
+        width: 20%;
+    }
+
+    .right {
+        height: 97vh;
+        width: 18%;
+    }
+
+    .left .top {
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+
+    .left .bottom {
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+
 }
