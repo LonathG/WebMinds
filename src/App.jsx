@@ -20,77 +20,77 @@ import { RevealLinks } from "./components/RevealLink";
 export const products = [
   {
     title: "Crane Auto",
-    link: "",
+    link: "https://jolly-flan-118e59.netlify.app/",
     thumbnail: "/assets/thumbnails/crane.webp"
   },
   {
     title: "Lolins",
-    link: "https://cursor.so",
+    link: "https://lolins.netlify.app/",
     thumbnail: "/assets/thumbnails/lolins.webp"
   },
   {
     title: "WebMinds Designers",
-    link: "https://userogue.com",
+    link: "",
     thumbnail: "/assets/thumbnails/WebD.jpg"
   },
   {
     title: "Kaveeshwara",
-    link: "https://editorially.org",
+    link: "https://kaveeshwarephtoto.netlify.app/",
     thumbnail: "/assets/thumbnails/kavee.webp"
   },
   {
     title: "Artisan Antiques",
-    link: "https://editrix.ai",
+    link: "https://www.artisanantique.com/",
     thumbnail: "/assets/thumbnails/artisan.webp"
   },
   {
     title: "Artisan Antiques",
-    link: "https://app.pixelperfect.quest",
+    link: "https://www.artisanantique.com/",
     thumbnail: "/assets/thumbnails/artisan.webp"
   },
   {
     title: "Timbershapes",
-    link: "https://algochurn.com",
+    link: "https://clinquant-phoenix-6ed864.netlify.app/",
     thumbnail: "/assets/thumbnails/timber.webp"
   },
   {
     title: "Furnishings",
-    link: "https://ui.aceternity.com",
+    link: "https://furnishingweb.netlify.app/",
     thumbnail: "/assets/thumbnails/furnish.webp"
   },
   {
     title: "Colorverse",
-    link: "https://tailwindmasterkit.com",
+    link: "https://statuesque-syrniki-342bbf.netlify.app/",
     thumbnail: "/assets/thumbnails/Color.webp"
   },
   {
     title: "Artisan Antiques",
-    link: "https://smartbridgetech.com",
+    link: "https://www.artisanantique.com/",
     thumbnail: "/assets/thumbnails/artisan.webp"
   },
   {
     title: "Elemental Architecture",
-    link: "https://renderwork.studio",
+    link: "https://elementalacrichecture.netlify.app/",
     thumbnail: "/assets/thumbnails/archi.webp"
   },
   {
     title: "Little England Farm",
-    link: "https://cremedigital.com",
+    link: "https://littleenglandfarm.netlify.app/",
     thumbnail: "/assets/thumbnails/LEF.webp"
   },
   {
     title: "Bijou",
-    link: "https://goldenbellsacademy.com",
+    link: "https://majestic-nougat-ab39b7.netlify.app/",
     thumbnail: "/assets/thumbnails/bijou.webp"
   },
   {
     title: "Jimmu",
-    link: "https://invoker.lol",
+    link: "https://jimmu.global/",
     thumbnail: "/assets/thumbnails/jimmu.webp"
   },
   {
     title: "Lolins",
-    link: "https://cursor.so",
+    link: "https://lolins.netlify.app/",
     thumbnail: "/assets/thumbnails/lolins.webp"
   },
 ];
