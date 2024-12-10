@@ -11,9 +11,11 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-bold uppercase mb-4">/Find Us</h3>
             <address className="not-italic text-sm">
-              No 74, New Old Factory, <br />
-              Taunton, Somerset, <br />
+              The Old Rectory, <br />
+              Taunton, Ta4 3jt, <br />
+              Somerset, <br />
               United Kingdom.
+             
             </address>
           </div>
 
@@ -22,8 +24,8 @@ export default function Footer() {
             <h3 className="text-sm font-bold uppercase mb-4">/Contact Us</h3>
             <p className="text-sm">
               +44 7983 637117 <br />
-              damien@webmindsdesigns.com
-            </p>
+              damian@webmindsdesigns.com
+              </p>
           </div>
 
           {/* Pricing */}
