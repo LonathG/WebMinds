@@ -84,7 +84,7 @@ export const ProductCard = ({ product, translate }) => {
         className="group/product h-96 w-[40rem] relative flex-shrink-0 sm:h-[340px] sm:w-[420px] md:h-[380px] lg:w-[40rem] min-xs:h-[180px] min-xs:w-[340px]
       > " //min-xs:h-[180px] min-xs:w-[340px]
       >
-      <a href={product.link} className="block group-hover/product:shadow-2xl ">
+      <a href={product.link} target="_blank" className="block group-hover/product:shadow-2xl ">
         <img
           src={product.thumbnail}
           alt={product.title}
