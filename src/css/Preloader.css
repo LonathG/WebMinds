@@ -1,0 +1,40 @@
+.preloader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.preloader-image {
+  width: 150px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite ease-in-out; /* Bouncing animation */
+}
+
+.preloader-text {
+  font-size: 1.5rem;
+  text-align: center;
+  animation: fadeIn 2s infinite alternate; /* Fading animation */
+}
+
+/* Bouncing animation for the logo */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Fading animation for the text */
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

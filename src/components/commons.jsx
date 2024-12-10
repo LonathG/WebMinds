@@ -2,38 +2,30 @@ import React, { useState, forwardRef, useRef } from "react";
 import LogoLight from "../assets/Webminds.webp";
 import LogoDark from "../assets/Webminds-dark.webp";
 import "../css/commons.css";
-import '../css/style.css'
+import "../css/style.css";
 
-import Curve from "./Curve"
-import {AnimatePresence} from 'framer-motion'
+import Curve from "./Curve";
+import { AnimatePresence, motion } from "framer-motion";
 
-import Nav from "../components/Nav"
-
-
-import { motion } from "framer-motion";
+import Nav from "../components/Nav";
 
 import { PiYoutubeLogoFill } from "react-icons/pi";
 import { AiFillTikTok } from "react-icons/ai";
 import { FaFacebookSquare } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 
-// Forward ref for multiple elements
 const Commons = forwardRef((props, ref) => {
-
-
-  const [isActive,setIsActive] = useState(false);
-
+  const [isActive, setIsActive] = useState(false);
   const [logo, setLogo] = useState(LogoLight);
-  const [isCursorVisible, setCursorVisible] = useState(true); // State to manage cursor visibility
 
-  // Refs for the elements you want the cursor to follow
+  // Refs for the elements
   const youtubeRef = useRef(null);
   const tiktokRef = useRef(null);
   const facebookRef = useRef(null);
   const instagramRef = useRef(null);
   const logoRef = useRef(null);
 
-  // Expose refs via the forwarded ref (stickyElement)
+  // Expose refs via the forwarded ref
   React.useImperativeHandle(ref, () => ({
     youtubeIcon: youtubeRef.current,
     tiktokIcon: tiktokRef.current,
@@ -59,74 +51,99 @@ const Commons = forwardRef((props, ref) => {
     };
   }, []);
 
+  // Framer Motion variants for animations
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.8 } },
+  };
+
   return (
     <>
-
-      <div  className="button22" onClick={() => setIsActive(!isActive)}>
+      <motion.div
+        className="button22"
+        onClick={() => setIsActive(!isActive)}
+        initial="hidden"
+        animate="visible"
+        variants={itemVariants}
+      >
         <div className={`burger ${isActive ? "burgerActive" : ""}`}></div>
-      </div>
-      
-      <AnimatePresence mode="wait">
+      </motion.div>
 
+      <AnimatePresence mode="wait">
         {isActive && <Nav />}
       </AnimatePresence>
-        <Curve/>
+      <Curve />
 
-      <div className="left">
-        <motion.div ref={logoRef}>
+      <motion.div
+        className="left"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <motion.div ref={logoRef} variants={itemVariants}>
           <img className="top" src={logo} alt="WebMinds-Logo" />
         </motion.div>
 
         <div className="bottom">
-          <div className="one" ref={youtubeRef}>
+          <motion.div className="one" ref={youtubeRef} variants={itemVariants}>
             <a
-              href="https://www.youtube.com/" // Replace with your YouTube channel link
+              href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <PiYoutubeLogoFill className="icons" />
             </a>
-          </div>
-          <div className="one" ref={tiktokRef}>
+          </motion.div>
+          <motion.div className="one" ref={tiktokRef} variants={itemVariants}>
             <a
-              href="https://www.tiktok.com/" // Replace with your TikTok profile link
+              href="https://www.tiktok.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <AiFillTikTok className="icons" />
             </a>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Right Section */}
-      <div className="right">
-        <div
-          className="top" 
-        >
-
-        </div>
+      <motion.div
+        className="right"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <div className="top"></div>
         <div className="bottom">
-          <div className="one" ref={facebookRef}>
+          <motion.div className="one" ref={facebookRef} variants={itemVariants}>
             <a
-              href="https://www.facebook.com/" // Replace with your Facebook page link
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <FaFacebookSquare className="icons" />
             </a>
-          </div>
-          <div className="one" ref={instagramRef}>
+          </motion.div>
+          <motion.div
+            className="one"
+            ref={instagramRef}
+            variants={itemVariants}
+          >
             <a
-              href="https://www.instagram.com/" // Replace with your Instagram profile link
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <RiInstagramFill className="icons" />
             </a>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 });
